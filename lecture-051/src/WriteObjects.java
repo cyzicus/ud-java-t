@@ -9,8 +9,8 @@ public class WriteObjects {
 		
 		System.out.println("Writing objects...");
 
-		try (FileOutputStream fs = new FileOutputStream("test.ser");
-				ObjectOutputStream os = new ObjectOutputStream(fs)) {
+		try (ObjectOutputStream os = 
+				new ObjectOutputStream(new FileOutputStream("test.ser"))) {
 			
 			Person person = new Person(7, "Bob");
 			os.writeObject(person);

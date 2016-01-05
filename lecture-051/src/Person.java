@@ -4,7 +4,7 @@ public class Person implements Serializable {
 
 	private final static long serialVersionUID = 4801633306273802062L;
 	
-	private int id;
+	private transient int id;
 	private String name;
 	
 	public Person(int id, String name) {
