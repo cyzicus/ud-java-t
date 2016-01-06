@@ -17,10 +17,14 @@ public class Person implements Serializable {
 		Person.count = count;
 	}
 
+	public Person() {
+		System.out.println("Default constructor");
+	}
+	
 	public Person(int id, String name) {
-		super();
 		this.id = id;
 		this.name = name;
+		System.out.println("Two argument constructor");
 	}
 
 	@Override

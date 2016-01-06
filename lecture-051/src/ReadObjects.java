@@ -11,6 +11,8 @@ public class ReadObjects {
 		try (ObjectInputStream os = 
 				new ObjectInputStream(new FileInputStream("test.ser"))) {
 			
+			// No constructor is used to create this Person object
+			// So don't expect a constructor to run when deserializing an object
 			Person person = (Person)os.readObject();
 			System.out.println(person);
 			
